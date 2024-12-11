@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vikas Gowda J A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient */
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        }
+
+        body.dark-theme {
+            background: #121212; /* Dark background */
+            color: #f5f5f5; /* Light text */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 150px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        .highlight {
+            color: #007bff;
+        }
+
+       
+        h4 {
+            font-family: "Monospace";
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            width: fit-content;
+            animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+            border-color: #004c99;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-color: transparent;
+            }
+            to {
+                border-color: #004c99;
+            }
+        }
+
+        
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        button {
+            background-color: #0056b3;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004494;
+        }
+
+        section.active {
+            background-color: lightyellow; /* Or any other style to highlight */
+        }
+
+
+.list-group-flush {
+    border-radius: 0; 
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+
+.rectangular-image {
+    display: inline-block; 
+    width: 100%; 
+    max-width: 400px; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 0; 
+    margin-top: 20px; 
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <header>
+            <img src="images/BestofBest---.jpg" alt="Vikas Gowda J A">
+            <h1 class="highlight">Vikas Gowda J A</h1>
+            <p><a href="mailto:vikasgowdaja@gmail.com">vikasgowdaja@gmail.com</a> | +91 9008433284</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="my-4">
+            <button class="btn btn-outline-dark" onclick="scrollToSection('about')">About Me</button>
+            <button class="btn btn-outline-dark" onclick="scrollToSection('projects')">Projects</button>
+            <button class="btn btn-outline-dark" onclick="scrollToSection('contact')">Contact</button>
+            <button id="themeToggle" class="btn btn-warning">Toggle Theme</button>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a <span class="highlight">software engineer</span> with experience in modern web development. I specialize in <b>JavaScript</b>, <b>Node.js</b>, and creating <b>responsive</b> and <b>dynamic applications</b>.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mt-5">
+            <h2>Projects</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">E-commerce Application - Full Stack Development</li>
+                <li class="list-group-item">Portfolio Website - Personal Branding</li>
+                <li class="list-group-item">API Development - Express.js and MongoDB</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mt-5">
+            <h2>Contact Me</h2>
+            <form id="clientForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="text-center">
+        <p>© 2024 Vikas Gowda J A. All Rights Reserved.</p>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
